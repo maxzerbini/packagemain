@@ -17,4 +17,3 @@ type OrderReference struct {
 	IdCustomer int
 	Total float64
 }
-

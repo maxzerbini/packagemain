@@ -5,7 +5,7 @@ import(
 	"github.com/maxzerbini/packagemain/rpc/model"
 	"github.com/maxzerbini/packagemain/rpc/client"
 )
-
+// Test the RPC client
 func main(){
 	endpoint := "localhost:9000"
 	c := client.NewOrderClient(endpoint)

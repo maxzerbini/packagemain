@@ -74,5 +74,4 @@ func main(){
 	s := NewOrderServer(endpoint)
 	go s.Do()
 	_,_ = fmt.Scanln()
-	
 }

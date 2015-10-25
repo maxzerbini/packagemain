@@ -48,7 +48,7 @@ func (nc *OrderClient) SendOrder(order *model.Order) ( reference *model.OrderRef
 	return reference, err
 }
 
-// Send new product
+// Send a single product order
 func (nc *OrderClient) SendSingleProduct(product *model.Product) ( err error) {
 	defer func() {
 		// executes normally even if there is a panic
