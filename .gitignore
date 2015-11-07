@@ -1,0 +1,33 @@
+# Folders #
+###########
+_obj
+_test
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs & Temp #
+###############
+*.log
+*.temp
+
+# Architecture specific extensions/prefixes #
+#############################################
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+*.test
+*.prof
