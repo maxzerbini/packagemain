@@ -16,7 +16,7 @@ func GenerateAnimation(text string, fontfile string, out io.Writer) {
 		nframes = 64 // number of animation frames
 		delay =8 // delay between frames in 10ms units
 	)
-	var xsize int = 30 + 30 * len(text)
+	var xsize int = 40 + 30 * len(text)
 	var ysize int = 200
 	
 	// Read the font data.
@@ -50,7 +50,7 @@ func GenerateAnimation(text string, fontfile string, out io.Writer) {
 	}
 	gif.EncodeAll(out, &anim) // NOTE: ignoring encoding errors
 }
-// Write a text in the image
+// Write a text inside the image
 func WriteText(text string, f *truetype.Font, img *image.Paletted){
 	// Initialize the context.
 	fg:= image.Black
