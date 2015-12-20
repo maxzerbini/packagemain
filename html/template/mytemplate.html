@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{{.Title}}</title>
+</head>
+<body>
+<div>
+<h1>
+    {{ .Title }}
+</h1>
+</div>
+<div>
+	{{$layout := "Mon Jan _2 2006"}}
+	{{$BestProductId := 2}}
+	{{range .Products}}
+	{{with .Style}}
+		<ul style="font-family:{{.Font}};color:{{.Color}};">
+	{{end}}
+	{{if eq .Id $BestProductId }}
+			<li style="color:blue"><b> Best Product: {{.Name}}</b></li>
+	{{else}}
+			<li style="color:blue"> Product: {{.Name}}</li>
+	{{end}}
+			<li> Note: {{.Note}}</li>
+			<li> Category: {{.Category}}</li>
+			{{if .Style.Border}}
+			<li style="border-bottom:1px solid"> Update Date: {{.UpdateDate.Format $layout }}</li>
+			{{else}}
+			<li> Update Date: {{.UpdateDate.Format $layout }}</li>
+			{{end}}
+		</ul>
+	{{end}}
+</div>
+</body>
+</html>
